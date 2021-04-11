@@ -3,11 +3,11 @@ package com.example.covid_19app
 import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.covid_19app.databinding.ItemBulletBinding
 
-class  BulletViewHolder(view: View) : RecyclerView.ViewHolder(view){
-    private val textView = itemView.findViewById<TextView>(R.id.item_text)
+class  BulletViewHolder(private val viewBiding: ItemBulletBinding) : RecyclerView.ViewHolder(viewBiding.root){
 
     fun setText(text: String){
-        textView.text = text
+        viewBiding.itemText.text = text
     }
 }
